@@ -4,10 +4,10 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/leozeli/IProxypool/middleware/config"
+	"github.com/leozeli/IProxypool/middleware/storage"
+	"github.com/leozeli/IProxypool/util/iputil"
 	logger "github.com/sirupsen/logrus"
-	"github.com/wuchunfu/IpProxyPool/middleware/config"
-	"github.com/wuchunfu/IpProxyPool/middleware/storage"
-	"github.com/wuchunfu/IpProxyPool/util/iputil"
 	"net/http"
 	"time"
 )

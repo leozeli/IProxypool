@@ -3,8 +3,8 @@ package storage
 import (
 	"crypto/tls"
 	"fmt"
-	"github.com/wuchunfu/IpProxyPool/models/ipModel"
-	"github.com/wuchunfu/IpProxyPool/util/randomutil"
+	"github.com/leozeli/IProxypool/models/ipModel"
+	"github.com/leozeli/IProxypool/util/randomutil"
 	"golang.org/x/net/http2"
 	"net"
 	"net/http"

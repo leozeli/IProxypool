@@ -1,8 +1,8 @@
 package server
 
 import (
+	"github.com/leozeli/IProxypool/middleware/config"
 	"github.com/spf13/cobra"
-	"github.com/wuchunfu/IpProxyPool/middleware/config"
 )
 
 var StartCmd = &cobra.Command{

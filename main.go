@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/wuchunfu/IpProxyPool/api"
-	"github.com/wuchunfu/IpProxyPool/cmd"
-	"github.com/wuchunfu/IpProxyPool/middleware/config"
-	"github.com/wuchunfu/IpProxyPool/middleware/database"
-	"github.com/wuchunfu/IpProxyPool/middleware/logutil"
+	"github.com/leozeli/IProxypool/api"
+	"github.com/leozeli/IProxypool/cmd"
+	"github.com/leozeli/IProxypool/middleware/config"
+	"github.com/leozeli/IProxypool/middleware/database"
+	"github.com/leozeli/IProxypool/middleware/logutil"
 	"runtime"
 )
 

@@ -3,8 +3,8 @@ package database
 import (
 	"database/sql"
 	"fmt"
+	"github.com/leozeli/IProxypool/middleware/config"
 	"github.com/sirupsen/logrus"
-	"github.com/wuchunfu/IpProxyPool/middleware/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

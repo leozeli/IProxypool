@@ -3,9 +3,9 @@ package config
 import (
 	"fmt"
 	"github.com/fsnotify/fsnotify"
+	"github.com/leozeli/IProxypool/util/fileutil"
 	logger "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
-	"github.com/wuchunfu/IpProxyPool/util/fileutil"
 	"os"
 )
 

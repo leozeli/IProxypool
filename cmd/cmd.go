@@ -3,8 +3,8 @@ package cmd
 import (
 	"errors"
 	"fmt"
+	"github.com/leozeli/IProxypool/cmd/server"
 	"github.com/spf13/cobra"
-	"github.com/wuchunfu/IpProxyPool/cmd/server"
 	"os"
 )
 
