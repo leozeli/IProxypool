@@ -9,11 +9,11 @@ system:
 # mysql
 database:
   dbType: mysql
-  host: 127.0.0.1
+  host: 192.168.2.222
   port: 3306
   dbName: test
   username: root
-  password: root
+  password: 987617162
   prefix: proxy_
   charset: utf8mb4
   maxIdleConns: 5
@@ -30,7 +30,7 @@ log:
   filePath: logs
   fileName: run.log
   # Either "info", "warn", "error", "debug", default is "info"
-  level: debug
+  level: info
   # Can be "console" and "file", default is "console"
   # Use comma to separate multiple modes, e.g. "console, file"
   mode: file

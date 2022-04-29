@@ -6,7 +6,6 @@ import (
 	"github.com/wuchunfu/IpProxyPool/middleware/config"
 	"github.com/wuchunfu/IpProxyPool/middleware/database"
 	"github.com/wuchunfu/IpProxyPool/middleware/logutil"
-	"github.com/wuchunfu/IpProxyPool/run"
 	"runtime"
 )
 
@@ -24,10 +23,14 @@ func main() {
 	database.InitDB(&setting.Database)
 
 	// Start HTTP
-	go func() {
+	//go func() {
+	//	api.Run(&setting.System)
+	//}()
+	for {
 		api.Run(&setting.System)
-	}()
+	}
 
 	// Start Task
-	run.Task()
+	//todo: 改为api 触发
+	//run.Task()
 }

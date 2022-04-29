@@ -14,21 +14,16 @@ WORKDIR /app
 
 COPY . .
 
-ADD https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz /usr/local
-RUN xz -d -c /usr/local/upx-3.96-amd64_linux.tar.xz | \
-    tar -xOf - upx-3.96-amd64_linux/upx > /bin/upx \
-    && chmod a+x /bin/upx
 
 RUN set -eux \
     && go env -w GO111MODULE=on \
     && go env -w GOPROXY=https://goproxy.cn,direct \
-    && CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags '-w -s' -a -installsuffix cgo -o IpProxyPool . \
-    && upx IpProxyPool
+    && CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags '-w -s' -a -installsuffix cgo -o IpProxyPool . 
 
 FROM alpine:3.12
 
 # 指定镜像创建者信息
-LABEL MAINTAINER="319355703@qq.com"
+LABEL MAINTAINER="leozeli@qq.com"
 
 # 指定时区
 ENV TIMEZONE Asia/Shanghai
@@ -42,7 +37,6 @@ RUN set -eux \
     && sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk upgrade \
     && apk update \
-    && apk add --no-cache ca-certificates upx --no-progress bash tzdata busybox-extras \
     && ln -sf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
     && echo ${TIMEZONE} > /etc/timezone \
     && rm -rf /var/cache/apk/*
